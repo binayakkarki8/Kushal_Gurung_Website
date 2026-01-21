@@ -149,7 +149,7 @@ const videosData = [
 
 // ==================== LANGUAGE SWITCHER ====================
 const langButtons = document.querySelectorAll('.lang-btn');
-let currentLang = 'en';
+let currentLang = 'ne';
 
 function translatePage(lang) {
     currentLang = lang;
@@ -208,7 +208,7 @@ function translatePage(lang) {
 
 // Load saved language on page load
 window.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+    const savedLang = localStorage.getItem('preferredLanguage') || 'ne';
     translatePage(savedLang);
 });
 
