@@ -3,6 +3,61 @@ const API_URL = window.location.hostname === 'localhost'
     ? 'http://localhost:3000/api' 
     : '/api';
 
+    // ==================== WELCOME POPUP ====================
+const welcomePopup = document.getElementById('welcomePopup');
+const closePopupBtn = document.getElementById('closePopup');
+
+// Show popup on page load
+window.addEventListener('load', () => {
+    // Check if popup was already shown in this session
+    const popupShown = sessionStorage.getItem('welcomePopupShown');
+    
+    if (!popupShown && welcomePopup) {
+        document.body.style.overflow = 'hidden';
+        
+        // Auto-close after 5 seconds
+        setTimeout(() => {
+            closeWelcomePopup();
+        }, 5000); // Change to 3000 for 3 seconds
+    } else if (welcomePopup) {
+        welcomePopup.style.display = 'none';
+    }
+});
+
+// Close popup function
+function closeWelcomePopup() {
+    if (welcomePopup) {
+        welcomePopup.classList.add('hide');
+        document.body.style.overflow = 'auto';
+        sessionStorage.setItem('welcomePopupShown', 'true');
+        
+        setTimeout(() => {
+            welcomePopup.style.display = 'none';
+        }, 500);
+    }
+}
+
+// Manual close button
+if (closePopupBtn) {
+    closePopupBtn.addEventListener('click', closeWelcomePopup);
+}
+
+// Close on background click
+if (welcomePopup) {
+    welcomePopup.addEventListener('click', (e) => {
+        if (e.target === welcomePopup) {
+            closeWelcomePopup();
+        }
+    });
+}
+
+// Close on ESC key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && welcomePopup && !welcomePopup.classList.contains('hide')) {
+        closeWelcomePopup();
+    }
+});
+
 // ==================== VIDEO DATA ====================
 const videosData = [
     {
@@ -162,9 +217,16 @@ const videosData = [
     {
         id: 23,
         thumbnail: './images/videos/video23.png',
-        title: 'i) Nepal\'s Himalayas melting due to the development of powerful nations, a concern for the world.',
+        title: 'Nepal\'s Himalayas melting due to the development of powerful nations, a concern for the world.',
         titleNe: 'शक्ति राष्ट्रहरूको विकासले नेपालको हिमाल पग्लिंदै, चिन्ता विश्वलाई |',
         videoUrl: 'https://www.youtube.com/embed/tgCMZwiJ5-g?si=2qT1Nqgv1PkRLOI9'
+    },
+    {
+        id: 24,
+        thumbnail: './images/videos/video24.png',
+        title: 'Kushal Gurung | How feasible is a hydrogen-powered fertilizer plant in Nepal?',
+        titleNe: 'कुशल गुरुङ | नेपालमा कति सम्भव हाइड्रोजनबाट चल्ने मल कारखाना ?',
+        videoUrl: 'https://www.youtube.com/embed/stnCcI2K3es?si=gTZ1xx_HLGp3hE6z'
     },
 ];
 
@@ -844,3 +906,4 @@ console.log('🎬 Video Section: Ready with Pagination');
 console.log('📸 Hero Slider: Active');
 console.log(`📹 Total Videos: ${videosData.length}`);
 console.log(`📄 Total Pages: ${totalPages}`);
+
