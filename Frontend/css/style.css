@@ -6,10 +6,10 @@
 }
 
 :root {
-    --primary-color: #f97316;
-    --primary-dark: #ea580c;
-    --secondary-color: #fb923c;
-    --accent-color: #fdba74;
+    --primary-color: #fbbf24;
+    --primary-dark: #d97706;
+    --secondary-color: #16a34a;
+    --accent-color: #22c55e;
     --dark-bg: #1f2937;
     --light-bg: #f9fafb;
     --white: #ffffff;
@@ -105,7 +105,7 @@ section {
 }
 
 .btn-primary:hover {
-    background: #16a34a;
+    background: #d97706;
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
@@ -116,7 +116,7 @@ section {
 }
 
 .btn-secondary:hover {
-    background: #b91c1c;
+    background: #15803d;
     transform: translateY(-2px);
 }
 
@@ -139,7 +139,7 @@ section {
 }
 
 .btn-support:hover {
-    background: #d97706;
+    background: #15803d;
 }
 
 /* ==================== NAVIGATION ==================== */
@@ -491,7 +491,8 @@ section {
 
 /* ==================== PARTY VISION BANNER - TWO COLUMN LAYOUT ==================== */
 .party-vision-banner {
-    background: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #dc2626 100%);
+    /* background: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #dc2626 100%); */
+    background: linear-gradient(135deg, #fbbf24 0%, #16a34a 50%, #15803d 100%);
     padding: 80px 0;
     margin-top: 80px;
     position: relative;
@@ -822,7 +823,7 @@ section {
     background: white;
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-    color: #ea580c;
+    color: var(--secondary-color);
 }
 
 .btn-party-website i {
@@ -1014,7 +1015,8 @@ section {
 .portfolio-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--primary-color), #1e3a8a);
+    /* background: linear-gradient(135deg, var(--primary-color), #1e3a8a); */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white);
     display: flex;
     align-items: center;
@@ -1056,9 +1058,344 @@ section {
     font-weight: bold;
 }
 
+/* ==================== PROFILE SECTION - NARRATIVE STYLE ==================== */
+.profile {
+    background: var(--light-bg);
+    padding: 80px 0;
+}
+
+.profile-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Hero Introduction */
+.profile-hero {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 60px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-lg);
+}
+
+.profile-hero-image {
+    position: relative;
+}
+
+.profile-hero-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+}
+
+.profile-hero-text .lead-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.profile-hero-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+/* Story Cards */
+.profile-story-card {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: var(--white);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-story-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+}
+
+.profile-story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.profile-story-card.reverse {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.05) 0%, rgba(22, 163, 74, 0.02) 100%);
+}
+
+.story-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    flex-shrink: 0;
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);  /* Yellow shadow */
+}
+
+.story-content h3 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.story-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+/* Recognition Section */
+.profile-recognition {
+    /* background: linear-gradient(135deg, var(--primary-color), #ea580c); */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 50px;
+    border-radius: 20px;
+    margin: 60px 0;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-recognition::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.profile-recognition h3 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.recognition-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.recognition-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+}
+
+.recognition-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.recognition-item i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #fbbf24;
+    filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.8));
+}
+
+.recognition-item h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.recognition-item p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.recognition-description {
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+}
+
+/* Conclusion Section */
+.profile-conclusion {
+    background: var(--white);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-xl);
+    border: 3px solid var(--primary-color);
+}
+
+.conclusion-content h3 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.conclusion-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.competitive-advantage {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(22, 163, 74, 0.05) 100%);
+    padding: 35px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 10px;
+    margin: 35px 0;
+    position: relative;
+    font-style: italic;
+}
+
+.competitive-advantage .fa-quote-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    opacity: 0.3;
+}
+
+.competitive-advantage .fa-quote-right {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    opacity: 0.3;
+}
+
+.competitive-advantage p {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0 40px;
+}
+
+.final-message {
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+    color: var(--primary-color) !important;
+    text-align: center;
+    margin-top: 30px !important;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(22, 163, 74, 0.05) 100%);
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .profile-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-hero-image {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .recognition-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-story-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .story-icon {
+        margin: 0 auto 20px;
+    }
+
+    .story-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .profile-recognition,
+    .profile-conclusion {
+        padding: 30px 20px;
+    }
+
+    .profile-recognition h3,
+    .conclusion-content h3 {
+        font-size: 1.7rem;
+    }
+
+    .competitive-advantage {
+        padding: 25px 15px;
+    }
+
+    .competitive-advantage p {
+        padding: 20px 10px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-hero-text .lead-text {
+        font-size: 1.1rem;
+    }
+
+    .story-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .story-content p {
+        font-size: 0.95rem;
+    }
+
+    .final-message {
+        font-size: 1.1rem !important;
+    }
+}
+
 /* ==================== CALL TO ACTION SECTION ==================== */
 .cta-section {
-    background: linear-gradient(135deg, var(--primary-color), #1e3a8a);
+    /* background: linear-gradient(135deg, var(--primary-color), #1e3a8a); */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     padding: 80px 0;
     text-align: center;
     position: relative;
@@ -1126,7 +1463,7 @@ section {
 .btn-cta:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    background: var(--accent-color);
+    background: var(--secondary-color);
     color: var(--white);
 }
 
