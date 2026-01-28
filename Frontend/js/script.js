@@ -62,168 +62,182 @@ document.addEventListener('keydown', (e) => {
 const videosData = [
     {
         id: 1,
-        thumbnail: './images/videos/video1.jpg',
+        thumbnail: './images/videos/video25.jpg',
+        title: 'Rabi and Balen betrayed Kulman; what is the possibility of them joining forces after the election?',
+        titleNe: 'रवि र बालेनले कुलमानलाई धोका दिए, अब चुनावपछि मिल्ने सम्भावना कति ?',
+        videoUrl: 'https://www.youtube.com/embed/RirxTh2K9zs?si=R0PnSUgj77UJZHvV'
+    },
+    {
+        id: 2,
+        thumbnail: './images/videos/video26.jpg',
+        title: 'Question to the energy expert: Why did the situation arise where you felt you had to enter politics? Can\'t an expert work from within the system?',
+        titleNe: 'ऊर्जाविज्ञलाई प्रश्न – राजनीति नगरी नहुने अवस्था किन आयो ? विज्ञले सिस्टमभित्रैबाट काम गर्न सक्दैन ?',
+        videoUrl: 'https://www.youtube.com/embed/KW36l6J_mfE?si=TRedBDkm-d6JfVsY'
+    },
+    {
+        id: 3,
+        thumbnail: './images/videos/video18.jpg',
         title: 'How successful was the Sagarmatha Sambad (Dialogue)? Why wasn\'t a declaration issued? Will Nepal not receive compensation?',
         titleNe: 'सगरमाथा संवाद कति सफल ? घोषणापत्र किन आएन ? नेपालले क्षतिपूर्ती नपाउने ?',
         videoUrl: 'https://www.youtube.com/embed/6O5fMxRpzRk?si=TljFHAzXAW9bV4R0'
     },
     {
-        id: 2,
+        id: 4,
         thumbnail: './images/videos/video2.jpg',
         title: 'Kushal Gururng | Explains How Loadshedding Ended',
         titleNe: 'कुशल गुरुङ | लोडसेडिङ कसरी अन्त्य भयो भन्ने व्याख्या',
         videoUrl: 'https://www.youtube.com/embed/wCKIa_rklJw?si=TE6cgsv3Hrr9VtpG'
     },
     {
-        id: 3,
+        id: 5,
         thumbnail: './images/videos/video3.jpg',
         title: 'Kushal Gurung | On War for Water',
         titleNe: 'कुशल गुरुङ | पानीका लागि संघर्षबारे',
         videoUrl: 'https://www.youtube.com/embed/sUxSu0hPK4w?si=NUAu34-vY1f1Q3Q2'
     },
     {
-        id: 4,
+        id: 6,
         thumbnail: './images/videos/video4.jpg',
         title: 'Legal Barriers to Alternative Energy Development and Lack of Government Interest',
         titleNe: 'वैकल्पिक उर्जा विकासमा ऐन बाधक, सरकारलाई छैन चासो',
         videoUrl: 'https://www.youtube.com/embed/crnoUkxb_H8?si=DnLStMLQTH5fpxgM'
     },
     {
-        id: 5,
+        id: 7,
         thumbnail: './images/videos/video5.jpg',
         title: 'Honourable Prime Minister, Isn’t Electricity Generated from Wind?',
         titleNe: 'प्रधानमन्त्रीज्यू, हावाबाट बिजुली निकाल्ने भनेको हैन ?',
         videoUrl: 'https://www.youtube.com/embed/fK-dC78mv5g?si=FHHpcEFbUMzD307Z'
     },
     {
-        id: 6,
+        id: 8,
         thumbnail: './images/videos/video6.jpg',
         title: 'Role of Renewable Energy',
         titleNe: 'नवीकरणीय ऊर्जाको भूमिका',
         videoUrl: 'https://www.youtube.com/embed/sS0YcKCjTCQ?si=xjhYxoyUx_xu-L4F'
     },
     {
-        id: 7,
+        id: 9,
         thumbnail: './images/videos/video7.jpg',
         title: 'Kushal Gururng | Energy Focus',
         titleNe: 'कुशल गुरुङ | ऊर्जामा केन्द्रित',
         videoUrl: 'https://www.youtube.com/embed/3KxKvDBwDXc?si=k-ABFsvCpWG_pDo0'
     },
     {
-        id: 8,
+        id: 10,
         thumbnail: './images/videos/video8.jpg',
         title: 'Kushal Gurung | What Obstacles they are Facing',
         titleNe: 'कुशल गुरुङ | सामना गरिरहेका चुनौतीहरू',
         videoUrl: 'https://www.youtube.com/embed/SF6wGqqTDN4?si=WatHyhzuICSIO1zG'
     },
     {
-        id: 9,
+        id: 11,
         thumbnail: './images/videos/video9.jpg',
         title: 'Kushal Gurung | Use and Prospects of Renewable Energy',
         titleNe: 'कुशल गुरुङ | नवीकरणीय ऊर्जाको प्रयोग र सम्भावना',
         videoUrl: 'https://www.youtube.com/embed/DZN2XGIj-nI?si=WTPCef8zJHZ9vXdC'
     },
     {
-        id: 10,
+        id: 12,
         thumbnail: './images/videos/video10.jpg',
         title: 'Harnessing Wind Energy from Muagdi and Mustang',
         titleNe: 'म्याग्दी र मुस्ताङबाट हावाको ऊर्जा उपयोग',
         videoUrl: 'https://www.youtube.com/embed/lBYSYFpDhwY?si=IPJenDvdQDCvywxG'
     },
     {
-        id: 11,
+        id: 13,
         thumbnail: './images/videos/video11.jpg',
         title: 'Clean Energy Leadership and the future of Renewable Power in Nepal',
         titleNe: 'नेपालमा स्वच्छ ऊर्जा नेतृत्व र नवीकरणीय ऊर्जाको भविष्य',
         videoUrl: 'https://www.youtube.com/embed/DpCCcCyJ64w?si=cZ2COEjOtGVC3omB'
     },
     {
-        id: 12,
+        id: 14,
         thumbnail: './images/videos/video12.jpg',
         title: 'Kushal Gurung | Why Nepal’s Participation in COP-29? What Were the Achievements?',
         titleNe: 'कुशल गुरुङ | कोप-२९ मा नेपालको सहभागिता किन ? उपलब्धी के ?',
         videoUrl: 'https://www.youtube.com/embed/zDJwRyHTYDg?si=sWGvlhx6N4n27UoE'
     },
     {
-        id: 13,
+        id: 15,
         thumbnail: './images/videos/video13.jpg',
         title: 'RE for Agriculture',
         titleNe: 'कृषि क्षेत्रमा नवीकरणीय ऊर्जा',
         videoUrl: 'https://www.youtube.com/embed/-Lg1EdQ_8YY?si=NsoxXqsDnm4Y5Dca'
     },
     {
-        id: 14,
+        id: 16,
         thumbnail: './images/videos/video14.jpg',
         title: 'Alternative Fertilizer Options for Nepal',
         titleNe: 'नेपालका लागि वैकल्पिक मल विकल्पहरू',
         videoUrl: 'https://www.youtube.com/embed/QsZt6fnYCK0?si=YPg1naZXmUcckKgR'
     },
     {
-        id: 15,
+        id: 17,
         thumbnail: './images/videos/video15.jpg',
         title: 'Asia 21: Give and Take Session',
         titleNe: 'एशिया २१ : लेनदेन सत्र',
         videoUrl: 'https://www.youtube.com/embed/naacbfqHpFU?si=3e7nmfmWHw_KjX3X'
     },
     {
-        id: 16,
+        id: 18,
         thumbnail: './images/videos/video16.jpg',
         title: 'How Wind Power in Nepal contributes to transform lives through sustainable solutions.',
         titleNe: 'नेपालमा हावाबाट उत्पादित बिजुलीले दिगो समाधानमार्फत जीवन रूपान्तरणमा कसरी योगदान पुर्‍याउँछ।',
         videoUrl: 'https://www.youtube.com/embed/ZrEy8R050Jo?si=-yyDR-RMD3ELq0w-'
     },
     {
-        id: 17,
+        id: 19,
         thumbnail: './images/videos/video17.jpg',
         title: 'Kushal Gurung | JAL SAROKAR | 28th December, 2015',
         titleNe: 'कुशल गुरुङ | जल सरोकार | २०१५ डिसेम्बर २८',
         videoUrl: 'https://www.youtube.com/embed/cS1UU_MMWOM?si=7aekW3VlfqABN6_A'
     },
     {
-        id: 18,
+        id: 20,
         thumbnail: './images/videos/video1.jpg',
         title: 'Climate Crisis, Clean Energy and Sustainable Solutios for the Future',
         titleNe: 'जलवायु संकट, स्वच्छ ऊर्जा र दिगो समाधानको भविष्य',
         videoUrl: 'https://www.youtube.com/embed/VsNG_unNpdc?si=vnbz4FvFse89IAPP'
     },
     {
-        id: 19,
-        thumbnail: './images/videos/video19.png',
+        id: 21,
+        thumbnail: './images/videos/video19.jpg',
         title: 'Mushrooming Hydropower Projects: The Possibility of the Economy Sinking',
         titleNe: 'बेग्रेल्ती जलविद्युत आयोजना:अर्थतन्त्र डुब्ने यस्तो सम्भावना ',
         videoUrl: 'https://www.youtube.com/embed/1gRgTV1EwTs?si=nvsfGHSje9B-PxcE'
     },
     {
-        id: 20,
-        thumbnail: './images/videos/video20.png',
+        id: 22,
+        thumbnail: './images/videos/video20.jpg',
         title: 'Is Nepal at risk of falling into climate debt? Climate Finance: Grants or Loans?',
         titleNe: 'के नेपाल जलवायु ऋणको जोखिममा पर्ने सम्भावना छ ? जलवायु वित्त अनुदान कि ऋण ?',
         videoUrl: 'https://www.youtube.com/embed/0Gb3Z1HxdYM?si=rv8r4xr09xFEcoN3'
     },
     {
-        id: 21,
-        thumbnail: './images/videos/video21.png',
+        id: 23,
+        thumbnail: './images/videos/video21.jpg',
         title: 'What is the potential for wind energy in Nepal? What are the benefits of generating energy from waste?',
         titleNe: 'नेपालमा वायु उर्जाको सम्भावना कति छ ? फोहोरबाट उर्जा निकाल्दाको फाइदा के हो ?',
         videoUrl: 'https://www.youtube.com/embed/_Z9neS-bysk?si=BEzvDt1bC103wGK4'
     },
     {
-        id: 22,
-        thumbnail: './images/videos/video22.png',
+        id: 24,
+        thumbnail: './images/videos/video22.jpg',
         title: 'Climate change puts Earth\'s very existence in crisis; threat of all living beings being wiped out.',
         titleNe: 'जलवायु परिवर्तनले पृथ्वीको अस्तित्व नै संकटमा, सबै प्राणी मासिने खतरा',
         videoUrl: 'https://www.youtube.com/embed/folmmJ2xjZo?si=sL8eRs6PAk5q7BiQ'
     },
     {
-        id: 23,
-        thumbnail: './images/videos/video23.png',
+        id: 25,
+        thumbnail: './images/videos/video23.jpg',
         title: 'Nepal\'s Himalayas melting due to the development of powerful nations, a concern for the world.',
         titleNe: 'शक्ति राष्ट्रहरूको विकासले नेपालको हिमाल पग्लिंदै, चिन्ता विश्वलाई |',
         videoUrl: 'https://www.youtube.com/embed/tgCMZwiJ5-g?si=2qT1Nqgv1PkRLOI9'
     },
     {
-        id: 24,
-        thumbnail: './images/videos/video24.png',
+        id: 26,
+        thumbnail: './images/videos/video24.jpg',
         title: 'Kushal Gurung | How feasible is a hydrogen-powered fertilizer plant in Nepal?',
         titleNe: 'कुशल गुरुङ | नेपालमा कति सम्भव हाइड्रोजनबाट चल्ने मल कारखाना ?',
         videoUrl: 'https://www.youtube.com/embed/stnCcI2K3es?si=gTZ1xx_HLGp3hE6z'
