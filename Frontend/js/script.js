@@ -3,60 +3,60 @@ const API_URL = window.location.hostname === 'localhost'
     ? 'http://localhost:3000/api' 
     : '/api';
 
-    // ==================== WELCOME POPUP ====================
-const welcomePopup = document.getElementById('welcomePopup');
-const closePopupBtn = document.getElementById('closePopup');
+//     // ==================== WELCOME POPUP ====================
+// const welcomePopup = document.getElementById('welcomePopup');
+// const closePopupBtn = document.getElementById('closePopup');
 
-// Show popup on page load
-window.addEventListener('load', () => {
-    // Check if popup was already shown in this session
-    const popupShown = sessionStorage.getItem('welcomePopupShown');
+// // Show popup on page load
+// window.addEventListener('load', () => {
+//     // Check if popup was already shown in this session
+//     const popupShown = sessionStorage.getItem('welcomePopupShown');
     
-    if (!popupShown && welcomePopup) {
-        document.body.style.overflow = 'hidden';
+//     if (!popupShown && welcomePopup) {
+//         document.body.style.overflow = 'hidden';
         
-        // Auto-close after 5 seconds
-        setTimeout(() => {
-            closeWelcomePopup();
-        }, 5000); // Change to 3000 for 3 seconds
-    } else if (welcomePopup) {
-        welcomePopup.style.display = 'none';
-    }
-});
+//         // Auto-close after 5 seconds
+//         setTimeout(() => {
+//             closeWelcomePopup();
+//         }, 5000); // Change to 3000 for 3 seconds
+//     } else if (welcomePopup) {
+//         welcomePopup.style.display = 'none';
+//     }
+// });
 
-// Close popup function
-function closeWelcomePopup() {
-    if (welcomePopup) {
-        welcomePopup.classList.add('hide');
-        document.body.style.overflow = 'auto';
-        sessionStorage.setItem('welcomePopupShown', 'true');
+// // Close popup function
+// function closeWelcomePopup() {
+//     if (welcomePopup) {
+//         welcomePopup.classList.add('hide');
+//         document.body.style.overflow = 'auto';
+//         sessionStorage.setItem('welcomePopupShown', 'true');
         
-        setTimeout(() => {
-            welcomePopup.style.display = 'none';
-        }, 500);
-    }
-}
+//         setTimeout(() => {
+//             welcomePopup.style.display = 'none';
+//         }, 500);
+//     }
+// }
 
-// Manual close button
-if (closePopupBtn) {
-    closePopupBtn.addEventListener('click', closeWelcomePopup);
-}
+// // Manual close button
+// if (closePopupBtn) {
+//     closePopupBtn.addEventListener('click', closeWelcomePopup);
+// }
 
-// Close on background click
-if (welcomePopup) {
-    welcomePopup.addEventListener('click', (e) => {
-        if (e.target === welcomePopup) {
-            closeWelcomePopup();
-        }
-    });
-}
+// // Close on background click
+// if (welcomePopup) {
+//     welcomePopup.addEventListener('click', (e) => {
+//         if (e.target === welcomePopup) {
+//             closeWelcomePopup();
+//         }
+//     });
+// }
 
-// Close on ESC key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && welcomePopup && !welcomePopup.classList.contains('hide')) {
-        closeWelcomePopup();
-    }
-});
+// // Close on ESC key
+// document.addEventListener('keydown', (e) => {
+//     if (e.key === 'Escape' && welcomePopup && !welcomePopup.classList.contains('hide')) {
+//         closeWelcomePopup();
+//     }
+// });
 
 // ==================== VIDEO DATA ====================
 const videosData = [
@@ -814,7 +814,7 @@ if (scrollTopBtn) {
 
 // ==================== SCROLL ANIMATIONS ====================
 const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.portfolio-item, .timeline-item, .stat-card');
+    const elements = document.querySelectorAll('.portfolio-item, .timeline-item, .stat-card, .policy-card, .project-category');
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
